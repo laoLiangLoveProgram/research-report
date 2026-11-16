@@ -10,6 +10,10 @@
     return;
   }
 
+  // 预生成的云健音频（有就播它，没有就退回浏览器 TTS）。
+  var audio = document.getElementById('report-audio');
+  var audioBtn = document.getElementById('audio-btn');
+
   // 每个朗读单元绑定一个 DOM 元素，用于朗读时蓝色高亮。
   var units = [];
   function textOf(el) {
@@ -21,23 +25,11 @@
     // 单条 utterance 太长时部分浏览器会中断，切成约 140 字的块。
     for (var p = 0; p < text.length; p += 140) units.push({ el: el, text: text.slice(p, p + 140) });
   }
-  var blocks = article.querySelectorAll('h2,h3,p,li,blockquote,tr');
+  var blocks = article.querySelectorAll('h2,h3,p,li,blockquote');
   for (var i = 0; i < blocks.length; i++) {
     var el = blocks[i];
-    // 表格按行朗读：把一行里的单元格依次连起来，时间线类表格也能读全。
-    if (el.tagName === 'TR') {
-      var cells = el.querySelectorAll('td');
-      if (!cells.length) continue;
-      var parts = [];
-      for (var c = 0; c < cells.length; c++) {
-        var t = textOf(cells[c]);
-        if (t) parts.push(t);
-      }
-      push(el, parts.join('，'));
-      continue;
-    }
-    if (el.closest('pre')) continue;
-    if (el.closest('td') || el.closest('th')) continue;   // 表格内容已按行读
+    // 表格与代码块不朗读：表格内容太长，读出来比看还慢。
+    if (el.closest('table') || el.closest('pre')) continue;
     if (el.tagName === 'P' && el.closest('li')) continue; // li 已整体读
     push(el, textOf(el));
   }
@@ -95,6 +87,7 @@
   }
 
   function start() {
+    if (audio) { audio.pause(); if (audioBtn) audioBtn.textContent = '▶ 云健音频'; }
     synth.cancel();
     state = 'speaking';
     idx = 0;
@@ -109,5 +102,19 @@
     if (state === 'paused') { synth.resume(); state = 'speaking'; btn.textContent = '⏸ 暂停'; }
   });
   if (stop) stop.addEventListener('click', function () { synth.cancel(); reset(); });
+  if (audio && audioBtn) {
+    audioBtn.addEventListener('click', function () {
+      if (audio.paused) {
+        synth.cancel();
+        reset();
+        audio.play();
+        audioBtn.textContent = '⏸ 暂停音频';
+      } else {
+        audio.pause();
+        audioBtn.textContent = '▶ 云健音频';
+      }
+    });
+    audio.addEventListener('ended', function () { audioBtn.textContent = '▶ 云健音频'; });
+  }
   window.addEventListener('beforeunload', function () { synth.cancel(); });
 })();
