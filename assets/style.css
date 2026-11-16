@@ -16,6 +16,15 @@ header.site h1 { font-size: 20px; margin: 0; font-weight: 600; }
 header.site span { color: #6b7280; font-size: 13px; }
 .crumb { font-size: 13px; color: #6b7280; margin: 18px 0 6px; }
 h1.report-title { font-size: 24px; line-height: 1.45; margin: 6px 0 4px; }
+.title-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 6px 0 4px; }
+.title-row h1.report-title { margin: 0; }
+.speak {
+  flex: none; cursor: pointer; font-size: 13px; line-height: 1;
+  padding: 7px 12px; border-radius: 999px; border: 1px solid #d1d5db;
+  background: #fff; color: #23272f;
+}
+.speak:hover { border-color: #1a5fb4; color: #1a5fb4; }
+.speak[hidden] { display: none; }
 .meta { color: #6b7280; font-size: 13px; margin-bottom: 22px; }
 article h2 { font-size: 19px; margin-top: 34px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; }
 article h3 { font-size: 16px; margin-top: 24px; }
