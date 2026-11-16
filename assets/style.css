@@ -1,0 +1,38 @@
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0 20px 64px;
+  font-family: -apple-system, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+  line-height: 1.85; color: #23272f; background: #fbfbfa;
+}
+main { max-width: 840px; margin: 0 auto; }
+a { color: #1a5fb4; text-decoration: none; }
+a:hover { text-decoration: underline; }
+header.site {
+  max-width: 840px; margin: 0 auto; padding: 28px 0 12px;
+  display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+}
+header.site h1 { font-size: 20px; margin: 0; font-weight: 600; }
+header.site span { color: #6b7280; font-size: 13px; }
+.crumb { font-size: 13px; color: #6b7280; margin: 18px 0 6px; }
+h1.report-title { font-size: 24px; line-height: 1.45; margin: 6px 0 4px; }
+.meta { color: #6b7280; font-size: 13px; margin-bottom: 22px; }
+article h2 { font-size: 19px; margin-top: 34px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; }
+article h3 { font-size: 16px; margin-top: 24px; }
+article p { margin: 12px 0; }
+article blockquote { margin: 16px 0; padding: 4px 14px; border-left: 3px solid #d1d5db; color: #4b5563; }
+article table { border-collapse: collapse; width: 100%; margin: 18px 0; font-size: 14px; }
+article th, article td { border: 1px solid #d1d5db; padding: 7px 9px; text-align: left; vertical-align: top; }
+article th { background: #f3f4f6; }
+article code { background: #f3f4f6; padding: 1px 5px; border-radius: 3px; font-size: 0.92em; }
+article li { margin: 6px 0; }
+article hr { border: 0; border-top: 1px solid #e5e7eb; margin: 30px 0; }
+.day { margin: 30px 0 8px; font-size: 14px; color: #6b7280; font-weight: 600; }
+ul.reports { list-style: none; padding: 0; margin: 0; }
+ul.reports li { padding: 14px 0; border-bottom: 1px solid #ececec; }
+ul.reports li a.title { font-size: 17px; font-weight: 600; }
+ul.reports li p { margin: 6px 0 0; color: #4b5563; font-size: 14px; }
+footer { max-width: 840px; margin: 48px auto 0; color: #9ca3af; font-size: 12px; }
+@media (max-width: 600px) {
+  article table { display: block; overflow-x: auto; }
+}

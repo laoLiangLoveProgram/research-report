@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[研报] 2026-11-14 AI数据中心的电力缺口</title>
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body>
+<header class="site"><h1><a href="../../index.html">研报</a></h1><span>政策 · 市场 · 产业</span></header>
+<main>
+<div class="crumb"><a href="../../index.html">全部研报</a> / 2026-11-14</div>
+<h1 class="report-title">AI数据中心的电力缺口</h1><div class="meta">2026-11-14 · 研报</div><article><p>主人，材料核完了。本鱼把抓到的官方原文、机构数据和 B 站线索一起整理成这篇，B 站那边只按标题当线索，没拿它们当事实用。</p>
+<hr />
+<h1>AI 数据中心的电力缺口：美国先被电卡住，还是先被选票卡住</h1>
+<p><strong>一句话结论</strong>：2026 年先撞上的是政治与监管瓶颈——11 月 3 日中期选举把数据中心直接变成公投议题，地方禁令、州级电价、联邦并网规则三条线同时收紧；电力瓶颈不是没来，而是被推到了 2027—2029 年，以容量拍卖打到上限、可靠性缺口和居民电价上涨的方式集中显形。更关键的一点：<strong>所谓"政治瓶颈"，本质是电力瓶颈的政治表达</strong>——居民账单涨了，票才转向。</p>
+<hr />
+<h2>一、发生了什么：一条按时间排的事件线</h2>
+<p><strong>【事实】</strong> 以下时间点均取自官方文件或当日报道，逐条标源。</p>
+<p><strong>2024 年 9 月</strong>：Constellation 与 Microsoft 签 20 年购电协议，重启三哩岛 1 号机组（改名 Crane Clean Energy Center），装机 835 兆瓦，计划 2027 年并网，重启投资约 16 亿美元。（转述：Power Engineering，2026-06-03；SMR Intel，2026-07-01）</p>
+<p><strong>2025 年 1 月 20 日</strong>：特朗普签署第 14156 号行政令《宣布国家能源紧急状态》，认定美国能源生产、输送与基础设施不足构成"不寻常且特殊的威胁"。（一手：Presidential Determination No. 2026-10 正文对该行政令的引述，2026-04-20）</p>
+<p><strong>2025 年 4 月 8 日</strong>：签署第 14262 号行政令《加强美国电网可靠性与安全》，要求能源部建立统一的"高风险区域"识别方法，并指导联邦可靠性干预，包括《联邦电力法》202(c) 条款下的紧急命令。（一手：美国能源部"Reliability"专题页，2025-07-07 报告说明）</p>
+<p><strong>2025 年 6 月</strong>：Meta 与 Constellation 签 20 年协议，包下伊利诺伊州 Clinton 核电站 1,121 兆瓦出力；Talen 与 Amazon 签协议，2025—2042 年供应 Susquehanna 核电 1,920 兆瓦。（转述：Nasdaq/RTTNews，2025-06-02；Talen 投资者关系页与 SEC 附件 99.1，2025-06-11）</p>
+<p><strong>2025 年 7 月 7 日</strong>：能源部发布《资源充裕性报告》。官方要点：若维持现有负荷增长、退役计划与增量装机，<strong>大多数区域将在五年内面临不可接受的可靠性风险</strong>；2030 年前将有 104 吉瓦稳定出力机组退役；处于开发后期的 154 吉瓦容量中，<strong>只有 19 吉瓦能 24 小时持续运行</strong>；年度停电风险可能从当前的个位数小时升至每年 800 小时以上。（一手：energy.gov/topics/reliability）</p>
+<p><strong>2025 年 10 月 23 日</strong>：FERC 就"大型负荷接入跨州输电系统"发布拟议规则制定事先通知（ANOPR），案号 RM26-4，同步附能源部长 Chris Wright 的信函。（一手：FERC 委员 LaCerte 意见书脚注 1，2026-06-18）</p>
+<p><strong>2025 年 12 月 17 日</strong>：PJM 公布 2027/2028 交付年基础容量拍卖结果，全区域出清价触及 FERC 批准的<strong>价格上限 333.44 美元/兆瓦·日</strong>；成交容量低于可靠性要求约 <strong>6,623 兆瓦</strong>，备用率 14.8%，低于"十年一遇"标准。（转述：Renewable Energy World，2025-12-17；CRA Insight，2026-02-16；NRG 市场更新，2025-12）——本鱼未取得 PJM 原始报告，此项标"转述"。</p>
+<p><strong>2025 年 12 月</strong>：NERC 发布《2025 长期可靠性评估》，数据为各区域 2025 年 7 月提交。核心结论：<strong>23 个评估区中 13 个在未来十年存在资源充裕性挑战</strong>；十年内夏季高峰负荷预计上升 <strong>224 吉瓦以上</strong>，比上一版预测的 132 吉瓦高 69%；冬季高峰上升 245 吉瓦；新增数据中心"构成北美未来十年电力需求增长的主要部分"；PJM 备用裕度<strong>自 2029 年起跌破参考水平</strong>。（一手：NERC LTRA 2025，执行摘要）</p>
+<p><strong>2026 年 1 月 8 日</strong>：Oklo 与 Meta 宣布在俄亥俄州派克县开发 1.2 吉瓦先进核能园区，初期供电目标约 2030 年，2034 年扩至满容量。（一手：Oklo 新闻稿，2026-01-08；2026-11-11 再签燃料供应协议）</p>
+<p><strong>2026 年 1 月 13 日</strong>：EIA 发布 1 月短期能源展望，称美国用电将连续四年增长，为 2007 年以来首次，也是 2000 年以来最强的四年增速，"主要驱动力是大型计算设施（含数据中心）的需求增长"。（一手：EIA 新闻稿 press582，2026-01-13）</p>
+<p><strong>2026 年 3 月 4 日</strong>：白宫发布《电费缴纳人保护承诺》（Ratepayer Protection Pledge），Amazon、Google、Meta、Microsoft、OpenAI、Oracle、xAI 七家签署。五项承诺：自建/自购新增电源并全额付费；承担为其数据中心新建的输电设施费用；<strong>无论是否实际用电都按约定费率付费</strong>；投资本地就业；在电力紧张时向电网开放备用电源。（一手：白宫发布页 2026-03；签署名单与日期见参议院 S.Con.Res.30 文本，2026-03-25）</p>
+<p><strong>2026 年 4 月 20 日</strong>：特朗普签署第 2026-10 号总统裁定，援引《国防生产法》第 303 条，认定"美国老化的、受约束的电网基础设施"对国防构成日益增长的威胁，变压器、高压输电部件、先进导线、电力电子、变电站等"国内生产能力危险地有限"，并豁免该条部分程序要求以加速采购与投资。（一手：联邦公报，2026-04-23 刊载，文件号 2026-08013）</p>
+<p><strong>2026 年 6 月 18 日</strong>：FERC 对全部六家 RTO/ISO 发出"说明理由令"（show cause orders），案号 EL26-67 等，初步认定各区域电网并网费率条款"可能不合理、无正当理由或存在不当歧视"，因其缺乏及时、可靠接入大型负荷的必要条款。委员 LaCerte 在同意意见中直接写："如果你们不提交及时、合理、非歧视且证据充分的方案，委员会将替你们定方案"，并称"准备在管辖权上打硬球"。（一手：FERC 官网 LaCerte 同意意见，2026-06-18）</p>
+<p><strong>2026 年 6 月</strong>：劳伦斯伯克利国家实验室（LBNL）发布两份关键更新。其一《美国数据中心能源使用报告：2025 更新版》：数据中心到 2030 年可能占全美用电 <strong>11.8%</strong>，区间 <strong>9.5%—15.3%</strong>（上一版为 2028 年 6.7%—12.0%）。（一手：OSTI 3374245）其二《Queued Up》2026 版：截至 2025 年底约 <strong>8,200 个项目</strong>在排队，合计 1,312 吉瓦发电与 749 吉瓦储能；2025 年投运项目从申请到商业运行<strong>中位时长超过 5 年</strong>；2000—2020 年提交申请的项目中<strong>仅 13%</strong> 最终投运，75% 撤回。（一手：LBNL 出版物页，2026-05）</p>
+<p><strong>2026 年 7 月 7 日</strong>：俄勒冈州公用事业委员会以 3:0 通过 Portland General Electric 对大负荷用户（含数据中心）<strong>上调 29.7%</strong> 的费率，居民用户费率下调 1.3%，7 月 8 日生效。（转述：T&amp;D World，2026-07-09；Daily Energy Insider，2026-07-12）</p>
+<p><strong>2026 年 8 月</strong>：弗吉尼亚州公司委员会（SCC）裁定，数据中心须承担"专为其实施服务的输电设施"的全部成本。此前 Dominion 申请以 9.985 亿美元附加费分摊，原方案会使基准居民账单每月增加 2.90 美元。（一手：弗吉尼亚州长办公室新闻稿，2026-08-10）</p>
+<p><strong>2026 年 10 月 6 日</strong>：Google 与 Constellation 宣布 20 年期协议，通过伊利诺伊州 11 台在运机组增容，为 PJM 新增 <strong>890 兆瓦</strong>无碳核电，Constellation 投资超 43 亿美元，首批增容预计 2028 年投运。（一手：Constellation 新闻稿，2026-10-06；金额转述 Yahoo Finance，2026-10-05）</p>
+<p><strong>2026 年 10 月 27 日</strong>：Constellation 获能源部"能源主导融资办公室"最高 <strong>50 亿美元</strong>有条件贷款承诺，用于核电机组增容。（一手：Constellation 新闻稿，2026-10-27）</p>
+<p><strong>2026 年 11 月 3 日</strong>：美国中期选举。民主党夺回参众两院（CNN 预测参议院 54 席，2026-11-04），并翻转五个州长职位（转述：Mitrade 引外媒，2026-11-08）。同日，<strong>10 个州、38 个地方辖区共 41 项</strong>数据中心相关公投中，除一项外几乎全部通过限制措施——禁令、暂停令、能耗上限、动工前须公投等；俄亥俄州占 21 项。（转述：路透社引 Ballotpedia，经 The National 2026-11-05；Economic Times 2026-11-04）</p>
+<p><strong>2026 年 11 月 4 日</strong>：数据中心与电力股集体下挫。路透社报道 GE Vernova 跌 11.5%、Constellation 跌 9.2%、Vistra 跌 15.4%；Core Scientific 跌 11.6%、IREN 跌 12.5%。（转述：路透社，2026-11-04，经 Yahoo Finance 转载页标题数据）</p>
+<p><strong>2026 年 11 月 10 日</strong>：EIA 发布 11 月短期能源展望，预计 2026 年美国发电量接近 <strong>4,390 太瓦时</strong>，同比增 2.7%，增量主要来自公用事业级光伏。（一手：EIA STEO 2026-11-10 概览页）</p>
+<hr />
+<h2>二、一手材料：电力侧到底缺什么</h2>
+<h3>2.1 需求端：从"平台期"到"四面起跳"</h3>
+<p><strong>【事实】</strong> EIA 2026 年 4 月《年度能源展望》给出的判断是：全国用电在十余年平台期后，过去五年年均增长 <strong>2.1%</strong>，2026—2050 年在各情景下年均增长 <strong>0.9%—1.6%</strong>，"数据中心负荷正在成为美国长期电力增长的主导驱动因素"。（EIA press587，2026-04-08）</p>
+<p><strong>【事实】</strong> 数据中心当前体量：参议院 S.Con.Res.30 文本载明，2024 年美国数据中心耗电约 <strong>183 太瓦时</strong>，占全国用电 <strong>4% 以上</strong>；能源部预测该比例 2028 年可能升至 <strong>12%</strong>。（S.Con.Res.30，2026-03-25）</p>
+<p><strong>【事实】</strong> 消费总量预测（转述）：EIA 2026 年 11 月展望预计全国用电从 2025 年创纪录的 4,216 太瓦时升至 2026 年 4,306、2027 年 4,370 太瓦时。（路透社，2026-11-10，引 EIA STEO；本鱼未取到该表原始页面，故标转述）</p>
+<p><strong>【事实】</strong> 单柜功率：NVIDIA GB200 NVL72 单柜满载约 <strong>120—132 千瓦</strong>，HPE 建议按约 <strong>192 千瓦</strong>峰值配置母线；NVIDIA 已将 120 千瓦、1,400 安培液冷机柜设计捐给开放计算项目（OCP）作为参考。（转述：Data Center Dynamics，2026-10-07；eeNews Europe，2024-10-14）</p>
+<h3>2.2 供给端：并网、设备、退役三重挤压</h3>
+<p><strong>【事实】</strong> 并网排队：截至 2025 年底 8,200 个项目、1,312 吉瓦发电容量在排队；2025 年投运项目从申请到商业运行中位时长 <strong>超过 5 年</strong>；2000—2020 年提交的申请<strong>只有 13%</strong> 最终投运。（LBNL《Queued Up》2026 版，2026-05）</p>
+<p><strong>【事实】</strong> 关键设备：总统裁定 2026-10 号原文称，美国设计、生产、部署大型电网基础设施的能力"危险地有限"，供应链面临"外国竞争、漫长的生产周期与对进口设备的过度依赖"。（联邦公报，2026-04-23）</p>
+<p><strong>【事实】</strong> 机组退役：2030 年前 104 吉瓦稳定出力机组待退役；而开发后期的 154 吉瓦中仅 19 吉瓦可全天候运行——若不同步补上可调度容量，年度停电小时数可能从个位数升至 800 小时以上。（能源部资源充裕性报告，2025-07-07）</p>
+<p><strong>【事实】</strong> 区域可靠性：NERC 评估的 23 个区域中 13 个存在十年内资源充裕性风险；PJM 备用裕度 2029 年起跌破参考水平；ERCOT 虽在 2026—2027 年风险改善，但"持续快速的负荷增长在后期超过计划新增资源"，德州已立法授予电网运营方<strong>对新增大负荷的中断权限</strong>。（NERC LTRA 2025）</p>
+<p><strong>【事实】</strong> 容量价格：PJM 2027/2028 交付年出清价触及上限 333.44 美元/兆瓦·日，且成交容量低于可靠性要求（转述，见上）。对照 2026/2027 交付年的 329.17 美元/兆瓦·日，2025/2026 交付年为 269.92 美元/兆瓦·日。（转述：Kilowatt Logic，2026-04-02）</p>
+<h3>2.3 政治侧：三层同时收紧</h3>
+<p><strong>联邦层</strong></p>
+<p><strong>【事实】</strong> 2026 年 3 月 4 日《电费缴纳人保护承诺》：七家科技公司承诺自建/自购电源、自付输电设施、<strong>无论用不用电都付费</strong>、投资本地就业、紧急时向电网开放备用电源。（白宫发布页；名单见 S.Con.Res.30）</p>
+<p><strong>【事实】</strong> 2026 年 6 月 18 日 FERC 对六家 RTO/ISO 发出说明理由令，对大型负荷并网条款作初步"不合理"认定，要求各区域提交方案；委员意见同时点名要求各州公用事业委员会"确保大负荷零售费率条款把纳税人隔离在数据中心扩张的负面影响之外"。（FERC 官网，2026-06-18）</p>
+<p><strong>州层</strong></p>
+<p><strong>【事实】</strong> 俄勒冈：PGE 大负荷费率 +29.7%，居民 −1.3%。（2026-07-07 州 PUC 决定，转述）
+<strong>【事实】</strong> 弗吉尼亚：SCC 要求数据中心承担专属输电设施成本；原方案会使居民基准账单每月多 2.90 美元。（州长办公室，2026-08-10）
+<strong>【事实】</strong> 参议院决议文本直言：传统监管模式下，为新增大工业负荷建设、升级、维护输配电设施的成本"被摊到所有用户身上"，等于"家庭和小企业实际上在补贴史上资本最雄厚的一些公司的电力基础设施"。（S.Con.Res.30，2026-03-25）</p>
+<p><strong>地方层</strong></p>
+<p><strong>【事实】</strong> 11 月 3 日，10 个州 41 项数据中心公投，除一项外几乎全部通过限制措施；俄亥俄 21 项分布在 18 个市镇。（转述：路透社引 Ballotpedia）
+<strong>【事实】</strong> 俄亥俄州皮夸市（Piqua）以约三分之二多数通过"禁止 25 兆瓦以上数据中心"的禁令，直接危及 Meta 一项<strong>投资超 10 亿美元、且已获批准</strong>的项目；威斯康星州简斯维尔市 6 月先否决开发商 Viridian 的 <strong>80 亿美元</strong>项目，再通过一年暂停令，11 月 3 日进一步要求该地块大型项目须经公投。（转述：法新社，2026-11-06，经 Malay Mail 转载）
+<strong>【事实】</strong> 据咨询公司 Redbud Consulting 统计，已有"三打以上"地方措施通过；商业数据库 Electric Choice 统计，全美已有近 <strong>600 个辖区</strong>对数据中心设限，含纽约、德州这类整州层面。（转述：法新社，2026-11-06）</p>
+<hr />
+<h2>三、各家怎么看（分歧并列）</h2>
+<h3>3.1 电力先卡住的一派</h3>
+<p><strong>【观点】能源部（2025-07-07）</strong>：现状不可持续，多数区域五年内面临不可接受的可靠性风险；"如果维持现有轨迹，将削弱美国经济增长、国家安全与新兴技术领导地位"。</p>
+<p><strong>【观点】NERC（2025-12）</strong>：新增资源与输电的增长"落后于支撑新增数据中心与其他大负荷所需的水平"；建议监管者"精简选址与许可流程"，因为选址许可问题是输电项目延迟最常见的原因之一。</p>
+<p><strong>【观点】Goldman Sachs Research（2025-02-03）</strong>：全球数据中心电力需求到 2027 年增长 50%，到 2030 年相较 2023 年增长 <strong>160%—165%</strong>。（机构公开观点页）</p>
+<p><strong>【观点】Uptime Institute《2026 年五大预测》（2026-01）</strong>：电力将成为 2026 年及以后数据中心增长的决定性约束；全球与 AI 相关的数据中心负载 2026 年底将达 <strong>10 吉瓦</strong>。（转述：The Register，2026-01-13）</p>
+<h3>3.2 政治与监管先卡住的一派</h3>
+<p><strong>【观点】高盛（2026-11-04，选后即时判断）</strong>：民主党在州与地方层面的胜利"可能导致项目暂时停工，影响约 <strong>45%</strong> 计划中的美国数据中心容量扩张"，但认为这是短期的。（转述：路透社，2026-11-04）</p>
+<p><strong>【观点】汇丰（2026-11-04）</strong>：给出两种情景——"我们看到的可能不是全面暂停令，而是更多监管与更高强度的审查"；或者"数据中心干脆搬走"。（转述：路透社，2026-11-04）</p>
+<p><strong>【观点】路透社引述的投资者（2026-11-04）</strong>：这场中期选举"更像一场对 AI 的公投，而不是对（某位政治人物）的公投"；"如果 AI 主题受到限制，美国经济、通胀与货币政策都会变得非常不确定"。</p>
+<p><strong>【观点】马斯克（2026-11-04，社交媒体）</strong>：选后发帖称"现在把数据中心放到太空里看起来相当有吸引力"。（转述：路透社）</p>
+<h3>3.3 认为"电价被冤枉"的一派</h3>
+<p><strong>【观点】E3 咨询（2026-05-18）</strong>：在现有费率结构下，<strong>没有历史证据</strong>表明数据中心在推高居民电价；电价上涨主要由五类经济与政策因素驱动，而非单纯负荷增长。<strong>需要注意</strong>：该报告由数据中心行业组织 Data Center Coalition 资助。（转述：TED Magazine，2026-05-27；日本电气事业联合会海外情报，2026-06-10）</p>
+<p><strong>【事实/对照】</strong> 而 EIA 月度电价数据显示：居民平均电价 2025 年全年 <strong>17.23 美分/千瓦时</strong>；2026 年 1—8 月为 <strong>18.19 美分/千瓦时</strong>，2025 年同期为 17.03，同比约 <strong>+6.8%</strong>（2026 年数值为初步估计）。（EIA《电力月报》表 5.3，数据截至 2026 年 8 月）</p>
+<p>这两组信息并不必然矛盾：E3 说的是"历史归因"，EIA 说的是"当期价格水平"。但把"数据中心不是电价上涨原因"当成结论去用，会与 2026 年的账单事实脱节。</p>
+<h3>3.4 电网老化这一条，官方怎么定性</h3>
+<p><strong>【事实】</strong> 美国土木工程师学会（ASCE）2025 年基础设施报告卡把能源类别评为 <strong>D+</strong>，较四年前的 C− 下调，并估算到 2033 年存在至少 <strong>5,780 亿美元</strong>投资缺口；报告明确把电动车、数据存储与人工智能列为加剧输配电压力的因素。（转述：ENR，2025-03-26；ASCE 报告卡页面，2025）</p>
+<p><strong>【事实】</strong> 总统裁定 2026-10 号把"老化且受约束的电网"直接写成国防风险，并动用《国防生产法》加速变压器等设备产能。（联邦公报，2026-04-23）</p>
+<h3>3.5 B 站 UP 主怎么看（只作观点，不作事实）</h3>
+<p><strong>【观点】</strong> 说明：本鱼未获取这些视频的音频或字幕内容，以下仅基于标题与公开简介归纳其立场，<strong>具体论据与数字未经核实</strong>。</p>
+<ul>
+<li>《美国AI自刎归天，怎么也成"中必输"了？》（毒舌的南瓜，62.0 万播放）：立场偏"美国自身结构性问题"，带有强烈戏谑色彩，属于评论而非数据型内容。</li>
+<li>《AI撞上美国"新世界"：暴跌、监管、政治博弈，数据中心何去何从？》（硅谷101，9.7 万播放）：把"暴跌—监管—政治博弈"串成一条因果链，与本篇的"政治先到"判断方向接近，但它的推演属观点。</li>
+<li>《给你一年，搞到 1 吉瓦：AI数据中心的电从哪来》（辞月赴尘，1.6 万播放）：聚焦"一年内拿到 1 吉瓦"这一工程与采购难题，指向的是<strong>交付周期</strong>而非政策，属于电力瓶颈派的表达。</li>
+<li>《英伟达烧穿电网！单柜功耗暴涨15倍，Meta拆楼微软抢光核电》（智视界AI时代，2,291 播放）：标题给出三个强主张——单柜功耗 15 倍、Meta 拆楼、微软抢光核电。其中"微软锁定核电"有 835 兆瓦三哩岛协议支撑；"15 倍"取决于基线口径，本鱼无法核实；"Meta 拆楼"未找到任何官方或权威报道佐证，<strong>不采信</strong>。</li>
+<li>《把AI数据中心建美国人"被窝里"，吵得要死还抢水电，美国人不反对才怪》（士口加I，28.8 万播放）：与 11 月 3 日公投结果方向一致，属"邻避效应"叙事，结论对，但它是现象描述而非因果分析。</li>
+</ul>
+<p><strong>另有三条与本课题无关，已筛除</strong>：《谁在给大模型出题、卖题、判卷？》（AI 数据标注行业）、《Workbuddy 数据可视化教程》、《AI数据分析+可视化 10 分钟完成 1 周工作量》（工具教程类）。</p>
+<hr />
+<h2>四、影响与推演</h2>
+<h3>4.1 判断：谁先撞上</h3>
+<p><strong>【推测】</strong> 本鱼的判断是——<strong>12—18 个月内政治与监管先撞，2027—2029 年电力瓶颈成为主约束</strong>。理由有三：</p>
+<ol>
+<li><strong>传导时滞不对称</strong>。一项地方禁令在投票当晚生效，可以直接杀死一个已批、已投十亿美元的项目（皮夸—Meta 就是样本）；而新增供给从决策到并网，中位要 5 年（LBNL）。政治的手比电力的手快得多。</li>
+<li><strong>电力侧已被价格和行政手段部分吸收</strong>。PJM 容量价格连续两年触顶，说明稀缺已被定价；《国防生产法》裁定、202(c) 紧急命令、快速并网程序都在压缩交付时间。缺电不是"没有电"，而是"电来得比算力慢"。</li>
+<li><strong>政治瓶颈反过来决定电力瓶颈的深度</strong>。能否新建燃气机组、能否建跨州输电、成本由谁承担——这三件事全部由政治过程决定。选票收紧的是"新增负荷的许可"，电网缺口限制的是"新增供给的交付"，两者在 2027—2029 年交汇。</li>
+</ol>
+<h3>4.2 对不同主体</h3>
+<p><strong>超大规模云厂商</strong>
+- 短期：项目排期从"拿地—建设"转为"拿电—建设"，选址第一变量变成并网容量，而非土地与光纤。
+- 中期：表后自备（BTM）、长期 PPA、SMR 期权三条腿并行。但核电是<strong>存量再分配＋增容</strong>：三哩岛 835 兆瓦、Clinton 1,121 兆瓦、Susquehanna 1,920 兆瓦、PJM 增容 890 兆瓦——这些数字加起来，仍小于 2026 年一年的新增负荷增量。<strong>可抢的存量有限，这是"抢核电"叙事的真实上限。</strong>
+- 《电费缴纳人保护承诺》的"用不用都付"条款，把电价风险从居民转移到公司自身资产负债表，等于给数据中心加了一层固定成本。</p>
+<p><strong>电力设备与独立发电商</strong>
+- 订单能见度上升（变压器、断路器、燃气轮机、液冷与配电），但政治折价已经出现：11 月 4 日 GE Vernova −11.5%、Vistra −15.4%、Constellation −9.2%。（转述：路透社）
+- <strong>【推测】</strong> 这个折价反映的是"许可风险"，不是"需求消失"。若 2027 年负荷预测被下修，设备订单会滞后反映，先杀估值、后杀订单。</p>
+<p><strong>公用事业与居民</strong>
+- 容量成本正在向零售传导：PJM 容量价格从 269.92 涨到 333.44 美元/兆瓦·日（两个交付年，转述），最终进账单。
+- 州级专项费率是 2026 年最实质的制度变化：俄勒冈把大负荷上调 29.7%、居民下调 1.3%；弗吉尼亚让数据中心承担专属输电成本。<strong>这是一种"政治上的成本再分配"，而不是减少总成本。</strong>
+- 居民电价 2026 年 1—8 月同比约 +6.8%（EIA），这是选票转向的直接燃料。</p>
+<p><strong>算力成本与地理</strong>
+- <strong>【推测】</strong> 电力从"运营成本项"变成"选址与许可约束"，会推高三类成本：并网等待的机会成本、自备电源的资本开支、以及政治风险溢价。三者都不体现在芯片价格里，但都会体现在 2027 年后的单位算力成本上。
+- 数据中心向监管友好州、向有存量核电的州、向海外迁移，是汇丰所说"搬走"情景的现实版本。</p>
+<p><strong>对中国的镜像（一句话，不展开）</strong>：美国这一轮暴露的是"需求增速超过电网与许可体系的处理能力"，中国的问题形状不同（并网快、电价管制强，但东部算力与西部电力存在空间错配），不能直接套用"缺电=利空算力"的结论。</p>
+<hr />
+<h2>五、不确定的地方</h2>
+<ol>
+<li><strong>B 站视频内容未获取</strong>。本鱼只拿到标题与公开简介，正文中对其观点的引用均为标题层面的归纳。"单柜功耗 15 倍""Meta 拆楼"两项未获权威佐证，其中"Meta 拆楼"未采信。</li>
+<li><strong>PJM 拍卖精确数字为转述</strong>。6,623 兆瓦缺口、14.8% 备用率、134,478 兆瓦成交容量等来自多家二手分析，本鱼无法访问 pjm.com 原始报告，故正文标"转述"。若引用为正式文件，需回到 PJM 2025-12-17 公告核对。</li>
+<li><strong>EIA 用电消费总量（4,216/4,306/4,370 太瓦时）为转述</strong>。EIA 11 月展望概览页只直接给出"2026 年发电接近 4,390 太瓦时、同比 +2.7%"，消费总量数字取自路透社引述。</li>
+<li><strong>州与地方的"600 个辖区"统计来自商业数据库</strong>（Electric Choice），非官方普查；"三打以上措施通过"来自咨询公司 Redbud Consulting，统计口径未公开。</li>
+<li><strong>E3 报告的独立性存疑</strong>：由数据中心行业组织 Data Center Coalition 资助。其"无历史证据"结论与 EIA 当期电价上涨事实之间的张力，本鱼未做进一步计量核验。</li>
+<li><strong>需求预测本身在被下修</strong>。NERC 明确指出，ERCOT 与 PJM 在数据采集后各自修订了负荷预测，"部分大负荷项目在短期内有放缓或未落地"，而后期并网申请仍在增加。这意味着"2030 年数据中心占 11.8%"是情景中值，不是承诺。</li>
+<li><strong>选举后的政策落地路径不确定</strong>。民主党控制两院后，联邦层可能出现听证、立法或拨款附加条件，但 2026 年剩余会期很短；地方禁令的法律效力（是否被州法优先权推翻、是否面临诉讼）尚待观察。皮夸禁令已直接冲击一个已批项目，是否会引发司法挑战未见报道。</li>
+<li><strong>FERC 说明理由令的整改期限</strong>：据 FERC 官网页面转述，原定 60 天已延至 2026 年 11 月 16 日（五家 RTO/ISO）与 11 月 20 日（SPP）。本鱼未打开该页面原文，期限细节标"转述"。</li>
+<li><strong>本报告未覆盖</strong>：各州具体电价案卷号与裁决全文、ERCOT"Batch Zero"约 205 吉瓦大负荷资格的原始材料、以及数据中心用水与噪音的地方诉讼。这些是下一篇可以补的口子。</li>
+</ol>
+<hr />
+<h2>六、延伸阅读</h2>
+<p><strong>B 站（线索与观点来源）</strong>
+1. <a href="https://www.bilibili.com/video/BV1ETWv6ZEHi">美国AI自刎归天，怎么也成"中必输"了？</a> — 毒舌的南瓜 — 62.0 万播放
+2. <a href="https://www.bilibili.com/video/BV1MDWR6cEGY">AI撞上美国"新世界"：暴跌、监管、政治博弈，数据中心何去何从？</a> — 硅谷101 — 9.7 万播放
+3. <a href="https://www.bilibili.com/video/BV1uhWv6GE8F">给你一年，搞到1吉瓦：AI数据中心的电从哪来</a> — 辞月赴尘 — 1.6 万播放
+4. <a href="https://www.bilibili.com/video/BV1oKWg6HEfx">英伟达烧穿电网！单柜功耗暴涨15倍，Meta拆楼微软抢光核电</a> — 智视界AI时代 — 2,291 播放
+5. <a href="https://www.bilibili.com/video/BV1MTWn6aEu3">把AI数据中心建美国人"被窝里"，吵得要死还抢水电，美国人不反对才怪</a> — 士口加I — 28.8 万播放</p>
+<p><strong>原文</strong>
+- <a href="https://www.eia.gov/outlooks/steo/">EIA 短期能源展望（2026 年 11 月）</a>
+- <a href="https://www.eia.gov/pressroom/releases/press582.php">EIA 新闻稿：2000 年以来最强四年用电增长（2026-01-13）</a>
+- <a href="https://www.eia.gov/pressroom/releases/press585.php">EIA 新闻稿：数据中心能耗试点调查（2026-03-25）</a>
+- <a href="https://www.eia.gov/pressroom/releases/press587.php">EIA 新闻稿：《2026 年度能源展望》（2026-04-08）</a>
+- <a href="https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_3">EIA《电力月报》表 5.3：各类用户平均电价</a>
+- <a href="https://www.energy.gov/topics/reliability">美国能源部"可靠性"专题页（资源充裕性报告要点）</a>
+- <a href="https://ferc.gov/news-events/news/e-7-commissioner-lacertes-concurrence-pjm-interconnection-llc-docket-no-el26-67">FERC 委员 LaCerte 关于 PJM 大负荷说明理由令的同意意见（2026-06-18）</a>
+- <a href="https://www.whitehouse.gov/releases/2026/03/ratepayer-protection-pledge/">白宫《电费缴纳人保护承诺》（2026-03）</a>
+- <a href="https://www.congress.gov/119/bills/sconres30/BILLS-119sconres30is.xml">参议院 S.Con.Res.30（2026-03-25）</a>
+- <a href="https://www.govinfo.gov/content/pkg/DCPD-202600275/html/DCPD-202600275.htm">总统裁定 2026-10 号：《国防生产法》第 303 条与电网设备（2026-04-20）</a>
+- <a href="https://emp.lbl.gov/publications/queued-2026-edition-characteristics">LBNL《Queued Up》2026 版</a>
+- <a href="https://www.osti.gov/biblio/3374245">LBNL《美国数据中心能源使用报告：2025 更新版》（OSTI）</a>
+- <a href="https://www.governor.virginia.gov/newsroom/news-releases/2026/august-releases/name-1122241-en.html">弗吉尼亚州长办公室：SCC 要求数据中心承担输电成本（2026-08-10）</a>
+- <a href="https://www.constellationenergy.com/news/2026.html">Constellation：Google 890 兆瓦核电增容协议（2026-10-06 新闻列表，需点入详情）</a>
+- <a href="https://www.fidelity.com/news/article/us-economy/202611042018RTRSNEWSCOMBINED_KCN3WF190-OUSPO_1">路透社：中期选举与数据中心反对者的力量（2026-11-04）</a>
+- <a href="https://www.malaymail.com/news/world/2026/11/06/were-not-for-sale-americans-reject-data-centre-projects-amid-growing-ai-backlash/242079">法新社："我们不出售"——美国人拒绝数据中心项目（2026-11-06）</a></p>
+<hr />
+<h2>七、来源清单</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>来源</th>
+<th>发布时间</th>
+<th>内容/统计期</th>
+<th>链接</th>
+<th>获取方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>美国能源信息署（EIA）短期能源展望</td>
+<td>2026-11-10</td>
+<td>2026 年发电约 4,390 太瓦时，+2.7%</td>
+<td>eia.gov/outlooks/steo/</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>2</td>
+<td>EIA 新闻稿 press582</td>
+<td>2026-01-13</td>
+<td>连续四年增长，2007 年以来首次；2026 年 +1%，2027 年 +3%</td>
+<td>eia.gov/pressroom/releases/press582.php</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>3</td>
+<td>EIA 新闻稿 press585</td>
+<td>2026-03-25</td>
+<td>数据中心能耗试点调查，覆盖 196 家公司</td>
+<td>同上 press585</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>4</td>
+<td>EIA 新闻稿 press587</td>
+<td>2026-04-08</td>
+<td>AEO2026：过去五年用电年均 +2.1%，2026—2050 年 +0.9%—1.6%</td>
+<td>同上 press587</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>5</td>
+<td>EIA《电力月报》表 5.3</td>
+<td>数据截至 2026-08</td>
+<td>居民电价 2025 年 17.23 美分；2026 年 1—8 月 18.19，2025 年同期 17.03</td>
+<td>eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_3</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>6</td>
+<td>NERC《2025 长期可靠性评估》</td>
+<td>2025-12 版（数据截至 2025-07）</td>
+<td>13/23 区域有风险；夏峰 +224 吉瓦；退役 105 吉瓦；PJM 2029 年跌破裕度</td>
+<td>nerc.com（PDF，7.8 MB）</td>
+<td>全文（PDF 抽取）</td>
+</tr>
+<tr>
+<td>7</td>
+<td>FERC 委员 LaCerte 同意意见（EL26-67-000）</td>
+<td>2026-06-18</td>
+<td>六份说明理由令；ANOPR RM26-4（2025-10-23）</td>
+<td>ferc.gov</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>8</td>
+<td>白宫《电费缴纳人保护承诺》</td>
+<td>2026-03-04</td>
+<td>五项承诺</td>
+<td>whitehouse.gov/releases/2026/03/ratepayer-protection-pledge/</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>9</td>
+<td>参议院 S.Con.Res.30</td>
+<td>2026-03-25</td>
+<td>2024 年数据中心 183 太瓦时、占比超 4%；2028 年或达 12%；七家签署方</td>
+<td>congress.gov</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>10</td>
+<td>总统裁定 2026-10 号（DPA §303）</td>
+<td>2026-04-20（2026-04-23 刊载）</td>
+<td>电网设备与供应链；"老化且受约束"</td>
+<td>govinfo.gov DCPD-202600275</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>11</td>
+<td>美国能源部"可靠性"专题页（资源充裕性报告）</td>
+<td>2025-07-07</td>
+<td>104 吉瓦退役；154 吉瓦中仅 19 吉瓦可全天候；停电风险升至 800 小时/年</td>
+<td>energy.gov/topics/reliability</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>12</td>
+<td>LBNL《Queued Up》2026 版</td>
+<td>2026-05</td>
+<td>8,200 项目 / 1,312 吉瓦；中位并网 &gt;5 年；13% 投运率</td>
+<td>emp.lbl.gov</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>13</td>
+<td>LBNL《数据中心能源使用报告：2025 更新版》</td>
+<td>2026-06</td>
+<td>2030 年占 11.8%（9.5%—15.3%）</td>
+<td>osti.gov/biblio/3374245</td>
+<td>摘要全文</td>
+</tr>
+<tr>
+<td>14</td>
+<td>美国土木工程师学会 2025 报告卡（能源 D+）</td>
+<td>2025</td>
+<td>能源评级 D+（前次 C−）；2033 年缺口 5,780 亿美元</td>
+<td>ASCE / ENR 转述</td>
+<td>转述</td>
+</tr>
+<tr>
+<td>15</td>
+<td>PJM 2027/2028 基础容量拍卖结果</td>
+<td>2025-12-17</td>
+<td>出清价 333.44 美元/兆瓦·日；缺口 6,623 兆瓦；备用率 14.8%</td>
+<td>pjm.com（原站不可达）</td>
+<td>转述（多源）</td>
+</tr>
+<tr>
+<td>16</td>
+<td>俄勒冈州 PUC / PGE 费率决定</td>
+<td>2026-07-07</td>
+<td>大负荷 +29.7%，居民 −1.3%，7-8 生效</td>
+<td>tdworld.com；dailyenergyinsider.com</td>
+<td>转述</td>
+</tr>
+<tr>
+<td>17</td>
+<td>弗吉尼亚州长办公室新闻稿</td>
+<td>2026-08-10</td>
+<td>SCC 要求数据中心承担专属输电成本；Dominion 9.985 亿美元附加费；居民账单 +2.90 美元</td>
+<td>governor.virginia.gov</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Constellation 新闻稿</td>
+<td>2026-10-06</td>
+<td>Google 890 兆瓦核电增容，20 年</td>
+<td>constellationenergy.com/news/2026.html</td>
+<td>列表全文</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Constellation 新闻稿</td>
+<td>2026-10-27</td>
+<td>能源部最高 50 亿美元有条件贷款（核能增容）</td>
+<td>同上</td>
+<td>列表全文</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Oklo 新闻稿</td>
+<td>2026-01-08；2026-11-11</td>
+<td>Meta 1.2 吉瓦俄亥俄园区；燃料供应协议</td>
+<td>oklo.com/newsroom</td>
+<td>转述+官方页</td>
+</tr>
+<tr>
+<td>21</td>
+<td>路透社（选后市场与政策）</td>
+<td>2026-11-04</td>
+<td>高盛：约 45% 计划容量受暂时影响；汇丰两种情景；个股跌幅</td>
+<td>fidelity.com 转载</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>22</td>
+<td>法新社（地方公投）</td>
+<td>2026-11-06</td>
+<td>皮夸禁令、Meta 10 亿美元项目、简斯维尔 80 亿美元项目、近 600 辖区</td>
+<td>malaymail.com</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>23</td>
+<td>路透社引 Ballotpedia</td>
+<td>2026-11-05</td>
+<td>10 州 41 项公投，俄亥俄 21 项</td>
+<td>thenationalnews.com</td>
+<td>转述</td>
+</tr>
+<tr>
+<td>24</td>
+<td>CNN</td>
+<td>2026-11-04</td>
+<td>民主党夺回两院（参议院 54 席预测）</td>
+<td>cnn.com</td>
+<td>转述</td>
+</tr>
+<tr>
+<td>25</td>
+<td>E3 咨询报告（Data Center Coalition 资助）</td>
+<td>2026-05-18</td>
+<td>无历史证据表明数据中心推高居民电价</td>
+<td>tedmag.com；fepc.or.jp</td>
+<td>转述</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Goldman Sachs Research</td>
+<td>2025-02-03</td>
+<td>数据中心电力需求 2027 年 +50%，2030 年 +160%—165%</td>
+<td>goldmansachs.com/insights</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Uptime Institute《2026 年五大预测》</td>
+<td>2026-01</td>
+<td>电力成为决定性约束；AI 数据中心负载 2026 年底 10 吉瓦</td>
+<td>theregister.com</td>
+<td>转述</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Data Center Dynamics</td>
+<td>2026-10-07</td>
+<td>GB200 NVL72 单柜 120—132 千瓦；建议母线按 192 千瓦</td>
+<td>datacenterdynamics.com</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Talen Energy 投资者关系 / SEC 附件 99.1</td>
+<td>2025-06-11</td>
+<td>Amazon 1,920 兆瓦核电，至 2042 年</td>
+<td>ir.talenenergy.com；sec.gov</td>
+<td>全文</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Power Engineering / SMR Intel</td>
+<td>2026-06-03 / 2026-07-01</td>
+<td>三哩岛 835 兆瓦、16 亿美元、2027 年重启、20 年 Microsoft 协议</td>
+<td>power-eng.com；smrintel.com</td>
+<td>转述</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>主人，这篇的口子我也标清楚了：PJM 原始拍卖报告和 ERCOT 的"Batch Zero"材料这两天下不下来（前者站点连不上，后者 403），下一轮如果网络通了我补上，把"转述"换成一手。</p></article>
+</main>
+<footer>由 policy-news 自动生成 · 内容按来源标注，观点与事实分列</footer>
+</body>
+</html>
