@@ -10,18 +10,38 @@
     return;
   }
 
-  // 按块级元素取正文，跳过表格与代码（表格念出来只会是噪音）。
-  var chunks = [];
-  var blocks = article.querySelectorAll('h2,h3,p,li,blockquote');
+  // 每个朗读单元绑定一个 DOM 元素，用于朗读时蓝色高亮。
+  var units = [];
+  function textOf(el) {
+    return (el.textContent || '').replace(/\s+/g, ' ').trim();
+  }
+  function push(el, text) {
+    text = (text || '').replace(/\s+/g, ' ').trim();
+    if (!text) return;
+    // 单条 utterance 太长时部分浏览器会中断，切成约 140 字的块。
+    for (var p = 0; p < text.length; p += 140) units.push({ el: el, text: text.slice(p, p + 140) });
+  }
+  var blocks = article.querySelectorAll('h2,h3,p,li,blockquote,tr');
   for (var i = 0; i < blocks.length; i++) {
     var el = blocks[i];
-    if (el.closest('table') || el.closest('pre')) continue;
-    var text = (el.textContent || '').replace(/\s+/g, ' ').trim();
-    if (!text) continue;
-    // 单条 utterance 太长时部分浏览器会中断，切成约 140 字的块。
-    for (var p = 0; p < text.length; p += 140) chunks.push(text.slice(p, p + 140));
+    // 表格按行朗读：把一行里的单元格依次连起来，时间线类表格也能读全。
+    if (el.tagName === 'TR') {
+      var cells = el.querySelectorAll('td');
+      if (!cells.length) continue;
+      var parts = [];
+      for (var c = 0; c < cells.length; c++) {
+        var t = textOf(cells[c]);
+        if (t) parts.push(t);
+      }
+      push(el, parts.join('，'));
+      continue;
+    }
+    if (el.closest('pre')) continue;
+    if (el.closest('td') || el.closest('th')) continue;   // 表格内容已按行读
+    if (el.tagName === 'P' && el.closest('li')) continue; // li 已整体读
+    push(el, textOf(el));
   }
-  if (!chunks.length) {
+  if (!units.length) {
     btn.disabled = true;
     btn.textContent = '没有可朗读的正文';
     return;
@@ -29,6 +49,16 @@
 
   var state = 'idle';
   var idx = 0;
+  var highlighted = null;
+
+  function highlight(el) {
+    if (highlighted) highlighted.classList.remove('speaking');
+    highlighted = el || null;
+    if (highlighted) {
+      highlighted.classList.add('speaking');
+      try { highlighted.scrollIntoView({ block: 'center', behavior: 'smooth' }); } catch (e) {}
+    }
+  }
 
   function zhVoice() {
     var list = synth.getVoices() || [];
@@ -41,24 +71,27 @@
   function reset() {
     state = 'idle';
     idx = 0;
+    highlight(null);
     btn.textContent = '🔊 朗读';
     if (stop) stop.hidden = true;
   }
 
   function next() {
     if (state !== 'speaking') return;
-    if (idx >= chunks.length) { reset(); return; }
-    var u = new SpeechSynthesisUtterance(chunks[idx++]);
-    u.lang = 'zh-CN';
-    u.rate = 1;
+    if (idx >= units.length) { reset(); return; }
+    var unit = units[idx++];
+    highlight(unit.el);
+    var utter = new SpeechSynthesisUtterance(unit.text);
+    utter.lang = 'zh-CN';
+    utter.rate = 1;
     var v = zhVoice();
-    if (v) u.voice = v;
-    u.onend = next;
-    u.onerror = function (e) {
+    if (v) utter.voice = v;
+    utter.onend = next;
+    utter.onerror = function (e) {
       if (e.error === 'interrupted' || e.error === 'canceled') return;
       reset();
     };
-    synth.speak(u);
+    synth.speak(utter);
   }
 
   function start() {
