@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[研报] 2026-11-20 AI家教工具怎么选</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/read.js" defer></script>
+</head>
+<body>
+<header class="site"><h1><a href="../../index.html">研报</a></h1><span>政策 · 市场 · 产业</span></header>
+<main>
+<div class="crumb"><a href="../../index.html">全部研报</a> / 2026-11-20</div>
+<div class="title-row"><h1 class="report-title">AI家教工具怎么选</h1><audio id="report-audio" src="../../assets/audio/2026-11-20/AI家教工具怎么选.mp3" preload="none"></audio><button id="audio-btn" class="speak" type="button">▶ 云健音频</button><button id="speak-btn" class="speak" type="button">🔊 朗读</button><button id="stop-btn" class="speak" type="button" hidden>停止</button></div><div class="meta">2026-11-20 · 研报</div><article><h1>AI家教工具怎么选</h1>
+<p>主人，这一轮本鱼把 DeepTutor 和市面上能对得上的同类工具都翻了一遍，也把“AI 家教到底有没有用”的几份对照实验找出来对照着看了。先说结论。</p>
+<h2>一句话结论</h2>
+<p>DeepTutor 值得动手试，但“免费开源”只免掉了软件钱，没免掉模型钱和折腾时间；它真正稀缺的能力是“基于你自己的材料、按你的错题讲、还逼你一步步想”，而不是“接了个大模型”。选 AI 家教先看它肯不肯少给答案、能不能落到你自己的教材和错题上，再看价格——顺序反了，买哪家都容易吃灰。</p>
+<h2>发生了什么</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025年5月13日</td>
+<td>教育部基础教育教学指导委员会《中小学生成式人工智能使用指南（2025年版）》全文公开，明确小学阶段禁止学生独自使用开放式内容生成功能，教师不得把生成式 AI 当作替代性教学主体</td>
+<td>巴音郭楞蒙古自治州教育局转载全文，2025年5月13日</td>
+</tr>
+<tr>
+<td>2025年6月25日</td>
+<td>PNAS 发表土耳其高中数学现场实验：无护栏的 GPT-4 答疑，用的时候分数涨得快，收走后反而比从未用过的学生更差</td>
+<td>PNAS，2025年6月25日</td>
+</tr>
+<tr>
+<td>2025年7月29日</td>
+<td>OpenAI 推出 ChatGPT 学习模式，向免费、Plus、Pro、Team 登录用户开放</td>
+<td>OpenAI，2025年7月29日</td>
+</tr>
+<tr>
+<td>2025年8月6日</td>
+<td>Google 在 Gemini 里上线 Guided Learning，带图片、视频和测验，可在 Google Classroom 分享</td>
+<td>Google 官方博客，2025年8月6日</td>
+</tr>
+<tr>
+<td>2025年10月22日</td>
+<td>一项 69 名本科生的对照研究发表：Khanmigo 组与 Google 搜索组的学习增益无显著差异</td>
+<td>Journal of Teaching and Learning，2025年10月22日</td>
+</tr>
+<tr>
+<td>2025年12月29日</td>
+<td>DeepTutor 正式发布，GitHub 仓库创建于 2025年12月28日</td>
+<td>GitHub 仓库，2026年11月20日；README 更新日志</td>
+</tr>
+<tr>
+<td>2026年4月10日</td>
+<td>DeepTutor 论文首次上传 arXiv，提出 TutorBench 评测基准</td>
+<td>arXiv，2026年4月10日（v1）</td>
+</tr>
+<tr>
+<td>2026年6月25日</td>
+<td>该 PNAS 论文后续版本信息与媒体转述持续发酵，核心结论被广泛引用</td>
+<td>PNAS 页面，2025年6月25日</td>
+</tr>
+<tr>
+<td>2026年5月</td>
+<td>媒体报道学而思联合中国信通院牵头制定《智能家教系统及应用技术要求与评估方法》</td>
+<td>TechWeb，2026年7月1日（转述）</td>
+</tr>
+<tr>
+<td>2026年7月1日</td>
+<td>学而思发布“培优 AI 家教”与 T6 系列学习机，首发价 6899 元、8699 元、11999 元，7月9日开售</td>
+<td>TechWeb，2026年7月1日（转述）</td>
+</tr>
+<tr>
+<td>2026年7月14日</td>
+<td>媒体横评四款 2000 元至 4000 元档学习机：作业帮 P60 2999 元、学而思 XPad 2499 元起、科大讯飞 S30 3999 元、小猿 S2 3299 元</td>
+<td>IT168，2026年7月14日（转述）</td>
+</tr>
+<tr>
+<td>2026年10月28日</td>
+<td>DeepTutor v1.7.0 发布，加入模块化安装、交互书本、带配音的视频讲解</td>
+<td>GitHub Releases，2026年10月28日</td>
+</tr>
+<tr>
+<td>2026年11月1日</td>
+<td>B 站视频《5万星神器，免费请个AI家教》发布，称项目已获 5.2 万颗星</td>
+<td>B 站，2026年11月1日</td>
+</tr>
+<tr>
+<td>2026年11月20日</td>
+<td>DeepTutor v1.7.4 发布；仓库星标 61033、复刻 7384、开放议题与合并请求合计 379</td>
+<td>GitHub API，2026年11月20日</td>
+</tr>
+</tbody>
+</table>
+<p>视频里说“5万2千颗星”，和现在对得上：2026年11月1日到11月20日，星标从约 5.2 万涨到 61033，属于同一趋势上的两个时点，不矛盾。</p>
+<h2>一手材料</h2>
+<h3>DeepTutor 的原理：不是“聊天机器人 + PDF”</h3>
+<p>【事实】按论文与官方文档，DeepTutor 的核心是三层东西拼在一起（arXiv，2026年7月9日，v3；DeepTutor 官方文档，检索于2026年11月20日）：</p>
+<ol>
+<li><strong>静态知识锚定（SKG）</strong>：把你上传的教材、讲义、论文建成可检索的知识库，回答要能指回原文。官方支持 LlamaIndex、PageIndex、GraphRAG、LightRAG 几种检索路线，也支持接入 GitHub 仓库、网页、Kiwix 离线百科。</li>
+<li><strong>动态学习者记忆（DPM）</strong>：把每一次对话拆成一棵“痕迹树”，再由三个记忆代理把痕迹蒸馏成学习画像，分 L1 原始痕迹、L2 事实、L3 综合三层。官方强调这层记忆“可查看、可编辑”，不是黑箱。</li>
+<li><strong>“调查—求解—表达”智能体流程</strong>：先诊断你卡在哪，再搭解题因果链，最后按你的水平组织讲解；过程中用自记笔记和分层压缩控制上下文长度。</li>
+</ol>
+<p>出题这一侧不是随便生成：题目生成器同时读知识库（保证事实有据）和记忆（校准难度），生成题干、答案、解析三件套。同一套“知识 + 记忆”底座还被复用到互动书本、掌握路径、多渠道学习伙伴上。</p>
+<p>【事实】官方给的部署门槛是 Python 3.11 至 3.14、Node.js 20.9 以上，或者直接用 Docker 一条命令起服务；模型、向量化、搜索、语音都要在设置里各自配 provider（DeepTutor 官方文档，检索于2026年11月20日）。可接的服务商很杂，从 OpenAI、Gemini、DeepSeek、通义千问到本地 Ollama、LM Studio、llama.cpp 都在列表里。</p>
+<p>【事实】许可证是 Apache 2.0（GitHub API，2026年11月20日）。作者在 README 里写明“目前没有任何形式的付费在线产品”，并招募维护者。</p>
+<h3>它自己怎么说效果</h3>
+<p>【事实】论文在自建的 TutorBench 上评测：270 个任务、90 个学生画像、30 个知识库，覆盖人文、理科、工科、商科、前沿研究五个方向；学生由大模型模拟，评委是另一个大模型，同一份对话评三次取平均（arXiv，2026年7月9日，v3）。</p>
+<p>结果：</p>
+<ul>
+<li>总体质量比“朴素家教”基线高 10.76%，十项指标里几乎全面领先；提升最明显的是生动性、个性化、逻辑深度。</li>
+<li>去掉知识锚定，掉得最多的是“有据可依”；去掉学习者记忆，掉得最多的是“个性化”和“题目贴合度”，说明两块是互补而不是重复。</li>
+<li>关掉个性化模块、只留解题流程，在 HLE、GPQA-Diamond、LiveBench、GAIA、AA-LCR 五个公开基准上，五个底座模型的平均相对提升在 25.69% 到 32.03% 之间。</li>
+</ul>
+<p>【事实】论文自己写了局限：评测靠大模型模拟学生和评分量表，和真实学习者之间有“不可消除的差距”；多阶段流程是用更多推理成本换可控性；书本、伙伴这些扩展对记忆力、参与度、真实学习结果的影响，需要长期的人类研究（arXiv，2026年7月9日，v3，Limitations）。</p>
+<h3>独立研究怎么说：效果分化很大</h3>
+<p>【事实】哈佛大学 2023 年秋季的对照实验，194 名物理课学生，AI 辅导组的学习增益约为课堂主动学习组的两倍，参与度和学习动机自评也更高；研究者的提醒是“AI 导师不该替学生思考，也不该取代真人教学”（Harvard Gazette，2024年9月4日，初步分析，最终论文当时尚未发表）。</p>
+<p>【事实】英国五所中学的探索性随机对照试验，165 名学生，把经过教学微调的 LearnLM 接入数学辅导，每条消息由真人导师审核修改。导师对 76.4% 的草稿只做零处或一两处字符的修改；学生在后续新题上的成功率 66.2%，比纯真人辅导组的 60.7% 高 5.5 个百分点（arXiv，2025年12月29日）。</p>
+<p>【事实】PNAS 的土耳其现场实验，近千名高中数学学生。带 GPT-4 做题时，普通界面组成绩提升 48%，加了学习护栏的组成绩提升 127%；但把 AI 收走之后，普通界面组比从未用过的学生低 17%，护栏组基本抹平了这个负面效应（PNAS，2025年6月25日）。</p>
+<p>【事实】Khanmigo 的对照研究只有 69 名本科生，分 Khanmigo 组和 Google 搜索组，前后测覆盖月相概念。所有组都有显著进步，但组间没有统计显著差异；学生访谈里认可分步引导，但普遍把它当补充工具而不是替代课堂（Journal of Teaching and Learning，2025年10月22日）。</p>
+<p>把四份放一起看，差别不在“是不是 AI”，而在“设计有没有强制思考”：越是不直接给答案、越有步骤和追问，效果越稳；越接近“拍照出答案”，短期分数越好看，长期越可能反噬。</p>
+<h3>政策与合规：K12 选型绕不开</h3>
+<p>【事实】《中小学生成式人工智能使用指南（2025年版）》要求：小学阶段禁止学生独自使用开放式内容生成功能，教师可在课内适当使用辅助教学；初中阶段可适度探索生成内容的逻辑性分析；高中阶段允许结合技术原理开展探究性学习。教师不得将生成式 AI 作为替代性教学主体，禁止直接使用 AI 回答学生问题或提供咨询；教育行政部门要建立动态调整的“白名单”制度，明确可入校使用的工具清单（教育部基础教育教学指导委员会，2025年5月13日全文转载）。</p>
+<p>这条对“怎么选”影响很直接：一个需要自己配模型、开放式对话、没有家长端监管的开源工具，小学阶段不适合让孩子独自用；它更适合家长陪着用，或者给成年人、大学生、教师自己用。</p>
+<h3>价格与可得性</h3>
+<p>【事实】</p>
+<ul>
+<li><strong>DeepTutor</strong>：软件免费，Apache 2.0；模型、向量化、搜索按所用服务商另计费，官方没有统一价格表（GitHub 仓库与官方文档，2026年11月20日）。</li>
+<li><strong>ChatGPT 学习模式</strong>：免费、Plus、Pro、Team 登录用户可用，定位是大学生（OpenAI，2025年7月29日）。</li>
+<li><strong>Gemini Guided Learning</strong>：在 Gemini 应用内使用，带测验与视频，可与 Google Classroom 联动（Google，2025年8月6日）。</li>
+<li><strong>豆包爱学</strong>：中国区 App Store 标注免费，功能含拍题答疑、作业批改、错题收录、AI 老师分步讲解（App Store 中国区页面，检索于2026年11月20日）。</li>
+<li><strong>Khanmigo</strong>：必须付费订阅，年满 18 岁、居住在美国且有美国账单地址；未成年需家长开户，一个家长账号最多带 10 个孩子；课堂使用只能走学校或学区采购（Khanmigo 官网，检索于2026年11月20日）。</li>
+<li><strong>学而思 T6 系列</strong>：首发价 6899 元、8699 元、11999 元（TechWeb，2026年7月1日，转述）。</li>
+<li><strong>中端学习机</strong>：作业帮 P60 2999 元、学而思 XPad 2499 元起、科大讯飞 S30 3999 元、小猿 S2 3299 元，文中标注为国补前官方旗舰店公开标价（IT168，2026年7月14日，转述）。</li>
+</ul>
+<h2>各家怎么看</h2>
+<p><strong>B 站 UP 主 Gorden_Sun（2026年11月1日）【观点】</strong>：把 DeepTutor 概括为“课本讲义 PDF 丢进去，照着你的资料讲；一键变互动书；学完马上出题；错题进题库；贴视频链接边看边问；记得你学过什么、哪里总错；能接微信、飞书、QQ；一句 Docker 命令装好”。这条视频是线索不是证据，逐条核对的结果见下一节。</p>
+<p><strong>B 站 UP 主“镜相工作室”（2026年7月23日）【观点】</strong>：教育行业过去拼课程、题库、名师，AI 时代这些资源变得触手可及，真正稀缺的是“先理解孩子，再决定怎么教”——诊断、规划、把割裂的学习串起来。这个判断和 DeepTutor 论文的技术路线是同一方向，但它是行业评论，不是效果证据。</p>
+<p><strong>B 站 UP 主“AI打工你享受”（2026年10月3日）【观点】</strong>：用 WorkBuddy 加 IMA 搭错题系统，核心卖点是“模型自己选、难题换最聪明的、按本地考法出复习卷”。这代表另一条路线：不买成品，用通用智能体加知识库自己拼。优点是可控，缺点是要电脑常开、要自己维护流程。</p>
+<p><strong>B 站课程《DeepSeek+AI家教实战营》（2025年11月23日）【观点】</strong>：主打家长焦虑转化与提问技巧，属于卖课内容，不是工具评测。它反映了一个真实需求：家长缺的不是软件，是“怎么问、怎么陪着用”的方法。</p>
+<p><strong>知乎讨论（2026年1月5日，仅摘要）【观点】</strong>：有回答提到部署时在本地配置和后端接口上踩坑，遇到 Python 版本、npm 编译失败等问题；体验几天后的评价是“不直接给答案、引导式学习”，适合从零入门的人，对给孩子做学习规划有帮助。这条只有搜索摘要，未取得全文，只能当参考。</p>
+<p><strong>DeepTutor 作者团队【观点】</strong>：定位是“终身个性化辅导”，强调完全开源、没有付费在线产品，并把知识锚定和学习者记忆当作核心差异（README，2026年11月20日）。</p>
+<p><strong>学而思方面【观点，转述】</strong>：称“AI 诊断规划 + AI 互动课堂”打通成动态闭环，拍作业和试卷后出具诊断报告与专属路径；并称其 AI 家教标准通过中国信通院评估、获当前最高评级（TechWeb，2026年7月1日）。标准原文与评估细节本鱼未取得，按转述处理。</p>
+<h2>视频里的说法，逐条核对</h2>
+<table>
+<thead>
+<tr>
+<th>视频说法</th>
+<th>核对结果</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>港大团队开源，GitHub 5.2 万星</td>
+<td>成立，且已涨到 61033</td>
+<td>GitHub API，2026年11月20日</td>
+</tr>
+<tr>
+<td>课本讲义 PDF 丢进去，照着你的资料讲</td>
+<td>成立，走 RAG 知识库并带出处引用</td>
+<td>官方文档与论文，2026年7月9日</td>
+</tr>
+<tr>
+<td>一键变互动书，有测验、闪卡、小动画</td>
+<td>大部分成立：互动书本、测验、Anki 与日历导出、数学动画、带配音视频课都在发布记录里；“闪卡”是否为独立功能未在官方首页明确列出</td>
+<td>GitHub Releases，2026年10月28日、2026年11月1日</td>
+</tr>
+<tr>
+<td>学完马上出题，错题自动进题库</td>
+<td>成立：题库与掌握路径的批改结果会流入题库</td>
+<td>GitHub Releases，2026年6月19日</td>
+</tr>
+<tr>
+<td>到点拉你复习</td>
+<td>部分成立：有日历、学习事件与 Anki 导出；是否内置间隔重复自动排程，官方文档未明确说明</td>
+<td>官方文档，检索于2026年11月20日</td>
+</tr>
+<tr>
+<td>贴视频链接边看边问，字幕还能搜</td>
+<td>前半成立：视频、音频可作为阅读材料并带引用；字幕搜索这一具体能力未见明确说明</td>
+<td>README 与文档，2026年11月20日</td>
+</tr>
+<tr>
+<td>现场做一段带配音的讲解小视频</td>
+<td>成立：video_lesson 能力与带配音视频课</td>
+<td>GitHub Releases，2026年10月28日</td>
+</tr>
+<tr>
+<td>记得你学过什么、哪里总错，记忆能打开看、随手改</td>
+<td>成立：三层记忆可查看可编辑</td>
+<td>README 与论文，2026年11月20日</td>
+</tr>
+<tr>
+<td>能接微信、飞书、QQ</td>
+<td>微信、企业微信、QQ 在文档里明确列出；飞书未在首页渠道清单中出现</td>
+<td>官方文档，检索于2026年11月20日</td>
+</tr>
+<tr>
+<td>免费开源，一句 Docker 命令装好</td>
+<td>软件免费、Apache 2.0、Docker 一条命令起服务都成立；但模型服务要自己配、自己付费</td>
+<td>GitHub 与官方文档，2026年11月20日</td>
+</tr>
+</tbody>
+</table>
+<p>一句话：视频的“功能面”基本靠谱，容易让人误解的是“免费”——它免的是软件许可，不是使用成本。</p>
+<h2>同类工具怎么比</h2>
+<h3>第一类：开源自部署的学习工作台</h3>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>定位与许可</th>
+<th>强在哪</th>
+<th>弱在哪</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DeepTutor</td>
+<td>智能体学习工作台，Apache 2.0，星标 61033</td>
+<td>知识锚定 + 学习者记忆 + 出题闭环，功能面最全；可本地模型</td>
+<td>配置项多、要自备模型服务；真实学习效果只有模拟评测；桌面预览版 Windows 未签名</td>
+</tr>
+<tr>
+<td>ChatTutor</td>
+<td>可视化交互式 AI 导师，AGPL 3.0，星标 1330</td>
+<td>轻量、界面直观，适合看“AI 导师长什么样”</td>
+<td>生态与功能深度远不及前者，AGPL 对商用不友好</td>
+</tr>
+<tr>
+<td>tutor-gpt</td>
+<td>基于心智理论推理的 AI 导师，GPL 3.0，星标 935</td>
+<td>思路有意思，研究向</td>
+<td>项目较早、维护弱，工程化程度低</td>
+</tr>
+<tr>
+<td>Mr. Ranedeer AI Tutor</td>
+<td>一套提示词模板，星标 29530，无许可证文件</td>
+<td>零部署，改提示词就能用</td>
+<td>没有知识库、没有记忆、没有题库，全靠模型自觉</td>
+</tr>
+</tbody>
+</table>
+<h3>第二类：通用知识库与智能体底座（不是家教，但能拼）</h3>
+<p>【事实】AnythingLLM 星标 68466、MIT；Open Notebook 星标 42094、MIT；Khoj 星标 38184、AGPL 3.0；RAGFlow 星标 94476、Apache 2.0；Dify 星标 161570（GitHub API，2026年11月20日）。</p>
+<p>【观点】这些项目的文档问答、检索、工作流比多数“家教”项目成熟，但都没有教学法层：不会诊断你哪一步不会、不会校准题目难度、不会追踪错题。把它们当家教用，等于把“讲课”全交给模型自由发挥——正好踩在 PNAS 那篇“无护栏反而有害”的坑上。</p>
+<h3>第三类：闭源通用模型的学习模式</h3>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>费用</th>
+<th>强在哪</th>
+<th>弱在哪</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT 学习模式</td>
+<td>免费及以上档位可用</td>
+<td>苏格拉底式提问、支架式讲解、知识检查，开箱即用</td>
+<td>不基于你的教材；记忆与诊断弱；中国大陆的服务可用性未核实</td>
+</tr>
+<tr>
+<td>Gemini Guided Learning</td>
+<td>Gemini 应用内</td>
+<td>图片、视频、测验混合，能和 Classroom 联动</td>
+<td>同样不绑定你的资料；地区与年龄限制未核实</td>
+</tr>
+<tr>
+<td>豆包爱学</td>
+<td>免费</td>
+<td>中文、拍题、作业批改、错题收录，门槛最低</td>
+<td>用户评论提到“默认你基础不差”，对基础薄弱者不友好；深度个性化有限</td>
+</tr>
+</tbody>
+</table>
+<h3>第四类：教育公司的专用产品</h3>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>价格</th>
+<th>强在哪</th>
+<th>弱在哪</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Khanmigo</td>
+<td>付费订阅，限美国</td>
+<td>不自称给答案、课程库绑定，安全性设计成熟</td>
+<td>地区与年龄门槛硬；对照研究未见优于普通搜索</td>
+</tr>
+<tr>
+<td>学而思培优 AI 家教</td>
+<td>硬件 6899 元起</td>
+<td>诊断规划 + 课程体系 + 家长端，闭环最完整</td>
+<td>价格高；AI 对话自由度不如通用模型</td>
+</tr>
+<tr>
+<td>作业帮 P60</td>
+<td>2999 元</td>
+<td>题库与讲题最强，拍题到分步讲解顺</td>
+<td>课程体系偏题库驱动</td>
+</tr>
+<tr>
+<td>科大讯飞 S30</td>
+<td>3999 元</td>
+<td>跨年级知识点溯源</td>
+<td>类人互动成熟度一般</td>
+</tr>
+<tr>
+<td>小猿 S2</td>
+<td>3299 元</td>
+<td>墨水屏护眼、学练一体</td>
+<td>刷新率低，看视频体验差</td>
+</tr>
+</tbody>
+</table>
+<p>（学习机价格与卖点均来自 IT168 2026年7月14日横评，属媒体转述，未逐一核对官方页面。）</p>
+<h2>怎么选：一张能落地的清单</h2>
+<p>【推测】下面这套顺序是本鱼根据上面的证据整理的判断方法，不是任何机构的标准。</p>
+<p><strong>第一步，先定“谁用、谁在旁边”。</strong></p>
+<ul>
+<li>小学：不让孩子独自用开放式生成工具（政策明确禁止独自使用）。要买就选有家长端、内容封闭、能看报告的产品；DeepTutor 这类开源工具只适合家长陪着用。</li>
+<li>初中、高中：优先“诊断 + 错题 + 规划”闭环，而不是“拍照出答案”。学习机的价值在这里，不在模型多聪明。</li>
+<li>大学、考研、考证、成人自学：DeepTutor、ChatGPT 学习模式这类更合适，因为你自己有材料、也有能力判断对错。</li>
+<li>教师：DeepTutor 可以做备课、出题、做知识库；但政策禁止直接拿 AI 回答学生问题，用它生成的材料要自己审。</li>
+</ul>
+<p><strong>第二步，看它肯不肯“少给答案”。</strong></p>
+<p>优先选默认引导、追问、分步，且能一键切回直接讲解的产品。PNAS 那份实验里，同样的模型，加了护栏的组学习效果更好、撤走 AI 后也不掉队；没护栏的组短期涨 48%，撤走后倒跌 17%。这一条比“模型是不是最新”重要得多。</p>
+<p><strong>第三步，看它能不能落到“你的材料”和“你的错题”。</strong></p>
+<p>DeepTutor 的知识锚定、学习机拍卷诊断、豆包爱学的错题收录，都是在做这件事。只能聊通用知识的工具，适合拓展视野，不适合补具体漏洞。</p>
+<p><strong>第四步，算总成本，不只算标价。</strong></p>
+<ul>
+<li>开源：软件 0 元，但模型调用按量计费，加上部署和维护时间；用本地模型可以省调用费，但要自己有能跑的机器。</li>
+<li>学习机：2499 元到 11999 元一次性支出，内容和服务随硬件走。</li>
+<li>订阅制：按月付，但受地区、年龄、账号限制。</li>
+<li>免费 App：钱省了，但数据、广告与内容边界要自己留意。</li>
+</ul>
+<p><strong>第五步，看合规与数据。</strong></p>
+<p>教育部指南要求白名单、禁止把个人信息和考试题输入 AI、教师不得用 AI 直接回答学生问题。自建工具的优势是数据留在本地；劣势是安全要自己负责——DeepTutor 的多用户认证默认关闭，放到公网前必须自己想清楚。</p>
+<h2>影响与推演</h2>
+<p><strong>对学生【推测】</strong>：门槛会继续下降，“有一个随时能问、还带出处”的家教正在变成默认配置。真正的分水岭不是有没有 AI，而是有没有人教他们“先自己想三分钟再问”。</p>
+<p><strong>对家长【推测】</strong>：短期会继续为“诊断报告”和“学习机”付费，因为家长买的是省心和可解释；长期看，通用模型加开源工具会把“讲题”这一层的溢价压薄，剩下的溢价在课程体系、学情数据和售后。</p>
+<p><strong>对教师与学校【推测】</strong>：AI 会更多进入备课、出题、批改环节，而不是替代课堂讲授。指南已经把边界画好，学校采购会向白名单和可审计的产品集中。</p>
+<p><strong>对行业【推测】</strong>：DeepTutor 这类项目的意义，是把“个性化家教”的工程配方公开了——知识锚定、学习者记忆、难度校准、出题闭环。配方公开后，竞争会转向三件事：谁的资料库更准、谁的学习数据更全、谁敢为学习效果负责。</p>
+<p><strong>对市场【事实】</strong>：学习机价格带已经拉到 2499 元至 11999 元，AI 家教成为核心卖点；同时免费的通用模型学习模式和免费 App 在下方挤压（IT168，2026年7月14日；TechWeb，2026年7月1日；OpenAI，2025年7月29日）。</p>
+<h2>不确定的地方</h2>
+<ol>
+<li><strong>DeepTutor 的真实学习效果没有人类学生数据</strong>。论文用的是大模型模拟学生和大模型评分，作者自己承认与真实学习者有差距；书本、伙伴等扩展对长期记忆和参与度的影响也还没有纵向研究。</li>
+<li><strong>“到点拉你复习”未完全核实</strong>。官方有日历、学习事件和 Anki 导出，但有没有内置的间隔重复调度，文档没有明确写；不能把“有日历”当成“会自动排复习”。</li>
+<li><strong>“字幕搜索”未核实</strong>。视频可以作为阅读材料并带引用是明确的，字幕级检索没有找到官方说明。</li>
+<li><strong>飞书渠道未核实</strong>。文档首页明确的是微信、企业微信、QQ/NapCat；“飞书”没有出现在该清单里。</li>
+<li><strong>星标不等于用户数</strong>。61033 星、7384 复刻、近 30 天 23766 次 Python 包下载（pypistats.org，2026年11月20日，近 30 天）只能说明关注度和安装量，不能说明有多少人在长期使用；下载量还可能包含自动构建与镜像。</li>
+<li><strong>学习机价格未逐一核对官方页面</strong>。2499 元至 11999 元来自媒体转述，促销、国补、渠道差异都可能让实际成交价不同。</li>
+<li><strong>Khanmigo 的具体月费未取得</strong>。官网只说需要按月或按年付费，没有在页面上给出金额。</li>
+<li><strong>中国信通院“AI 家教标准”只拿到媒体转述</strong>，标准原文、评估方法与评级口径未取得。</li>
+<li><strong>世界银行 2026 年 3 月那份数字教育干预元分析只看到摘要片段</strong>（191 个效应量、14 项研究、10 个经济体、AI 辅导平均效应约 0.12 个标准差），原文未取得，因此没有写进事实段落。</li>
+<li><strong>ChatGPT 学习模式与 Gemini Guided Learning 在中国大陆的可用性未核实</strong>，账号、网络与地区政策都可能影响实际能否使用。</li>
+<li><strong>知乎与公众号上的使用体验只拿到搜索摘要</strong>，没有取得全文，相关判断只作参考。</li>
+<li><strong>桌面版安全提醒</strong>：Windows 预览版未签名，可能出现 SmartScreen 警告；2026年11月20日的 v1.7.4 更换了运行时签名密钥，旧安装需要重新安装新版才能信任（GitHub Releases，2026年11月20日）。</li>
+</ol>
+<h2>延伸阅读</h2>
+<p>B 站：</p>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1MSxW67EDt">5万星神器，免费请个AI家教</a> — Gorden_Sun，2026年11月1日</li>
+<li><a href="https://www.bilibili.com/video/BV1vgUxBHEkg">【知识】DeepSeek+AI家教实战营</a> — 账号已注销，2025年11月23日</li>
+<li><a href="https://www.bilibili.com/video/BV1ACgD6GE29">AI家教入场，教育行业最值钱的，不再是课程和题库</a> — 镜相工作室，2026年7月23日</li>
+<li><a href="https://www.bilibili.com/video/BV1mYHe6PE93">我用WorkBuddy搭了个错题系统</a> — AI打工你享受，2026年10月3日</li>
+</ul>
+<p>原文与官方页面：</p>
+<ul>
+<li><a href="https://github.com/HKUDS/DeepTutor">DeepTutor 仓库</a></li>
+<li><a href="https://docs.deeptutor.info/">DeepTutor 官方文档</a></li>
+<li><a href="https://arxiv.org/abs/2604.26962">DeepTutor 论文（arXiv）</a></li>
+<li><a href="https://www.khanmigo.ai/">Khanmigo 官网</a></li>
+<li><a href="https://openai.com/zh-Hans-CN/index/chatgpt-study-mode/">ChatGPT 学习模式发布说明（OpenAI）</a></li>
+<li><a href="https://blog.google/products-and-platforms/products/education/guided-learning/">Guided Learning in Gemini（Google）</a></li>
+<li><a href="https://jtl.uwindsor.ca/index.php/jtl/article/view/10052">Khanmigo 对照研究（Journal of Teaching and Learning）</a></li>
+<li><a href="https://arxiv.org/abs/2512.23633">英国课堂 LearnLM 随机对照试验（arXiv）</a></li>
+<li><a href="https://news.harvard.edu/gazette/story/2024/09/professor-tailored-ai-tutor-to-physics-course-engagement-doubled/">哈佛物理课 AI 导师报道（Harvard Gazette）</a></li>
+<li><a href="https://doi.org/10.1073/pnas.2422633122">PNAS：无护栏的生成式 AI 会损害学习</a></li>
+<li><a href="http://www.xjbz.gov.cn/xjbz/c101441/202505/b4cb448629b945b797e84056f73e1043.shtml">《中小学生成式人工智能使用指南（2025年版）》全文转载</a></li>
+<li><a href="https://apps.apple.com/cn/app/id6469102455">豆包爱学（App Store 中国区）</a></li>
+</ul>
+<h2>来源清单</h2>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>发布时间</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GitHub 仓库 HKUDS/DeepTutor（星标、复刻、议题、许可证、创建时间）</td>
+<td>2026年11月20日检索</td>
+<td>https://github.com/HKUDS/DeepTutor</td>
+</tr>
+<tr>
+<td>GitHub Releases（v1.7.4、v1.7.0、历史版本说明）</td>
+<td>2026年11月20日</td>
+<td>https://github.com/HKUDS/DeepTutor/releases</td>
+</tr>
+<tr>
+<td>DeepTutor 官方文档（安装、Provider、能力面）</td>
+<td>2026年11月20日检索</td>
+<td>https://docs.deeptutor.info/</td>
+</tr>
+<tr>
+<td>DeepTutor 官方文档 Provider 配置页</td>
+<td>2026年11月20日检索</td>
+<td>https://docs.deeptutor.info/get-started/providers/</td>
+</tr>
+<tr>
+<td>arXiv《DeepTutor: Towards Agentic Personalized Tutoring》v3</td>
+<td>2026年7月9日</td>
+<td>https://arxiv.org/abs/2604.26962</td>
+</tr>
+<tr>
+<td>pypistats（deeptutor 近 30 天下载量）</td>
+<td>2026年11月20日检索，统计期近 30 天</td>
+<td>https://pypistats.org/packages/deeptutor</td>
+</tr>
+<tr>
+<td>Harvard Gazette《Professor tailored AI tutor to physics course》</td>
+<td>2024年9月4日</td>
+<td>https://news.harvard.edu/gazette/story/2024/09/professor-tailored-ai-tutor-to-physics-course-engagement-doubled/</td>
+</tr>
+<tr>
+<td>PNAS《Generative AI without guardrails can harm learning》</td>
+<td>2025年6月25日</td>
+<td>https://doi.org/10.1073/pnas.2422633122</td>
+</tr>
+<tr>
+<td>arXiv《AI tutoring can safely and effectively support students: An exploratory RCT in UK classrooms》</td>
+<td>2025年12月29日</td>
+<td>https://arxiv.org/abs/2512.23633</td>
+</tr>
+<tr>
+<td>Journal of Teaching and Learning《Leveraging “Khanmigo” Generative AI-Powered Tool for Personalized Tutoring》</td>
+<td>2025年10月22日</td>
+<td>https://jtl.uwindsor.ca/index.php/jtl/article/view/10052</td>
+</tr>
+<tr>
+<td>OpenAI《学习模式简介》</td>
+<td>2025年7月29日</td>
+<td>https://openai.com/zh-Hans-CN/index/chatgpt-study-mode/</td>
+</tr>
+<tr>
+<td>Google 官方博客《Guided Learning in Gemini》</td>
+<td>2025年8月6日</td>
+<td>https://blog.google/products-and-platforms/products/education/guided-learning/</td>
+</tr>
+<tr>
+<td>Khanmigo 官网（订阅、地区、年龄、家长账号规则）</td>
+<td>2026年11月20日检索</td>
+<td>https://www.khanmigo.ai/</td>
+</tr>
+<tr>
+<td>巴音郭楞蒙古自治州教育局转载《中小学生成式人工智能使用指南（2025年版）》</td>
+<td>2025年5月13日</td>
+<td>http://www.xjbz.gov.cn/xjbz/c101441/202505/b4cb448629b945b797e84056f73e1043.shtml</td>
+</tr>
+<tr>
+<td>TechWeb《学而思全新培优AI家教及旗舰学习机T6系列3款齐发》</td>
+<td>2026年7月1日</td>
+<td>https://www.techweb.com.cn/it/2026-07-01/2977081.shtml</td>
+</tr>
+<tr>
+<td>IT168《2026年2000-4000元AI学习机推荐》</td>
+<td>2026年7月14日</td>
+<td>https://m.it168.com/article_6940429.html</td>
+</tr>
+<tr>
+<td>App Store 中国区《豆包爱学》页面</td>
+<td>2026年11月20日检索</td>
+<td>https://apps.apple.com/cn/app/id6469102455</td>
+</tr>
+<tr>
+<td>GitHub 仓库 ChatTutor</td>
+<td>2026年11月20日检索</td>
+<td>https://github.com/HugeCatLab/ChatTutor</td>
+</tr>
+<tr>
+<td>GitHub 仓库 tutor-gpt</td>
+<td>2026年11月20日检索</td>
+<td>https://github.com/plastic-labs/tutor-gpt</td>
+</tr>
+<tr>
+<td>GitHub 仓库 Mr.-Ranedeer-AI-Tutor</td>
+<td>2026年11月20日检索</td>
+<td>https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor</td>
+</tr>
+<tr>
+<td>GitHub 仓库 AnythingLLM</td>
+<td>2026年11月20日检索</td>
+<td>https://github.com/Mintplex-Labs/anything-llm</td>
+</tr>
+<tr>
+<td>GitHub 仓库 Open Notebook</td>
+<td>2026年11月20日检索</td>
+<td>https://github.com/lfnovo/open-notebook</td>
+</tr>
+<tr>
+<td>GitHub 仓库 Khoj</td>
+<td>2026年11月20日检索</td>
+<td>https://github.com/khoj-ai/khoj</td>
+</tr>
+<tr>
+<td>GitHub 仓库 RAGFlow</td>
+<td>2026年11月20日检索</td>
+<td>https://github.com/infiniflow/ragflow</td>
+</tr>
+<tr>
+<td>GitHub 仓库 Dify</td>
+<td>2026年11月20日检索</td>
+<td>https://github.com/langgenius/dify</td>
+</tr>
+</tbody>
+</table>
+<p>有两条本鱼想单独提醒：一是“开源免费”这四个字容易让人忽略后面的模型账单，二是“星标多”只能说明它被看见，不能说明它教得好——真正决定效果的，还是那句老话，它得先让你自己想。</p></article>
+</main>
+<footer>由 policy-news 自动生成 · 内容按来源标注，观点与事实分列</footer>
+</body>
+</html>
